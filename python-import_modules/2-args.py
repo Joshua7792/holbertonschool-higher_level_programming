@@ -8,8 +8,8 @@ if args == 1:
     
 elif args == 2:
     print("1 argument:")
-    print("1: {}".format(sys.argv[1]))
+    print("1: {}".format(str(sys.argv[1])))
 else:
     print("{} arguments:".format(args - 1))
     for i in range(1, args):
-        print("{}: {}".format(i, sys.argv[i]))
+        print("{}: {}".format(i, str(sys.argv[i])))
