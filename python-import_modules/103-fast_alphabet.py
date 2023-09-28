@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-import string
-print(getattr(string, 'ascii_uppercase'))
+print(*[chr(i) for i in range(ord('A'), ord('Z')+1)], sep='')
