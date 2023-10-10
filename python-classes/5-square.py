@@ -36,5 +36,5 @@ class Square:
         if self._Square__size == 0:
             print()
         else:
-            for i in range(self._Square__size):
+            for height in range(self._Square__size):
                 print('#' * self._Square__size)
