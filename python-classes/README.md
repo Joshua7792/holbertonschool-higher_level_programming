@@ -1,6 +1,6 @@
 ![GIF](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/247/oop-meme.jpg)
 
-# Square Class Project
+# Python - Classes and Objects
 
 This project involves creating a Python class called Square that defines a square with various attributes and methods. The project is divided into several tasks, each building upon the previous one.
 
