@@ -3,8 +3,7 @@
 
 
 class Rectangle:
-    """ Definition of rectangle attribute """
-
+    """Definition of rectangle attribute"""
     def __init__(self, width=0, height=0):
         if type(width) is not int:
             raise TypeError('width must be an integer')
@@ -20,12 +19,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """ Return the width of the rectangle """
+        """Return the width of the rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ Sets the with of the rectangle """
+        """Set the width of the rectangle"""
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
@@ -35,12 +34,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """ Return the height of the rectangle """
+        """Return the height of the rectangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ Sets the height of the rectangle """
+        """Set the height of the rectangle"""
         if type(value) is not int:
             raise TypeError('height must be an integer')
         elif value < 0:
@@ -54,7 +53,7 @@ class Rectangle:
         return result_area
 
     def perimeter(self):
-        """retreives the perimeter of the rectangle"""
+        """Retrieve the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             res_perimeter = 0
             return res_perimeter
@@ -62,13 +61,13 @@ class Rectangle:
             res_perimeter = (self.__width * 2) + (self.__height * 2)
             return res_perimeter
 
-def __str__(self):
-    """Return a string representation of the rectangle"""
-    if self.__width == 0 or self.__height == 0:
-        return ""
-    rect = ""
-    for i in range(self.__height):
-        rect += "#" * self.__width
-        if i < self.__height - 1:
-            rect += "\n"  # Add a newline except for the last row
-    return rect
+    def __str__(self):
+        """Return a string representation of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        rect = ""
+        for i in range(self.__height):
+            rect += "#" * self.__width
+            if i < self.__height - 1:
+                rect += "\n"  # Add a newline except for the last row
+        return rect
