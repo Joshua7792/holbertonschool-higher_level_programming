@@ -43,6 +43,11 @@ class Rectangle:
         else:
             self.__height = value
 
+    @classmethod
+    def square(cls, size=0):
+        """returns a new Rectangle instance"""
+        return cls(size, size)
+
     def area(self):
         """Return the area of the rectangle"""
         result_area = self.__width * self.__height
@@ -85,12 +90,3 @@ class Rectangle:
         if rect_1.area() < rect_2.area():
             return rect_2
         return rect_1
-
-    @classmethod
-    def square(cls, size=0):
-        """Returns a new Rectangle instance as a square."""
-        if not isinstance(size, int):
-            raise TypeError("width must be an integer")
-        if size < 0:
-            raise ValueError("width must be >= 0")
-        return cls(size, size)
