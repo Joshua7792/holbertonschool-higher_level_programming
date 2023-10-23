@@ -38,3 +38,11 @@ class Base:
             for obj in list_objs:
                 list_dicts.append(obj.to_dictionary())
             f.write(Base.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Json string to dictionary"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
