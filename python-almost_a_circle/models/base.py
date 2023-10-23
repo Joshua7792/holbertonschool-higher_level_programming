@@ -49,9 +49,23 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ Create dummy instance and update attributes """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Return list of instances """
+        filename = cls.__name__ + ".json"
+        if not path.exists(filename):
+            return []
+        with open(filename, mode="r", encoding='utf-8') as f:
+            obj = cls.from_json_string(f.read())
+            instances = []
+            for d in obj:
+                instances.append(cls.create(**d))
+            return instances
