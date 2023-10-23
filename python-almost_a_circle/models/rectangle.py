@@ -104,4 +104,3 @@ class Rectangle(Base):
         elif kwargc > 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
