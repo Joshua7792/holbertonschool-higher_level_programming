@@ -75,13 +75,18 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
-        """ Return the are of rectangle """
+        """ Return the area of rectangle """
         return self.__width * self.__height
 
     def display(self):
-        """ Print rectangle using # """
+        """ Display rectangle in STDOUT"""
+        # Print empty lines (spaces) for the 'y' coordinate
+        for i in range(self.__y):
+            print()
+        # Print each row of the rectangle
         for i in range(self.__height):
-            print("#" * self.__width)
+            # Print empty spaces (offset) for the 'x' coordinate
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """ Print the rectangle info """
