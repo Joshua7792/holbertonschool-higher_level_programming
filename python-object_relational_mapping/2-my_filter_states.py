@@ -11,7 +11,7 @@ import sys
 if __name__ == "__main__":
     """Function that lists all states from database hbtn_0e_0_usa"""
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3])
+                         passwd=sys.argv[2], db=sys.argv[3],db=sys.argv[4])
 
     # Creating cursor object
     cur = db.cursor()
