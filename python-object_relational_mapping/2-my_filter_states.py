@@ -13,7 +13,8 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Executing MySql Query
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name = '{}'\
+                 ORDER BY id".format(sys.argv[4]))
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
