@@ -11,9 +11,10 @@ if __name__ == "__main__":
     # Creating cursor object
     cur = db.cursor()
 
-# Execute the query to retrieve all cities and order by cities.id
-    query = "SELECT id, name, state_id FROM cities ORDER BY id"
-    cur.execute(query)
+# Executing MySql Query
+    cur.execute("SELECT cities.id, cities.name,\
+                states.name FROM cities INNER JOIN states ON\
+                cities.state_id = states.id ORDER BY cities.id")
 
 
     # Obtaining Query Result & prints the result in rows
