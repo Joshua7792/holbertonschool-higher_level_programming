@@ -22,7 +22,7 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     tabl = []
     for row in rows:
-        lis.append(row[0])
+        tabl.append(row[0])
     print(', '.join(tabl))
 
     # Clean Up
