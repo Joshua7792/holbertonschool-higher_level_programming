@@ -16,7 +16,7 @@ if __name__ == "__main__":
 # Executing MySql Query
     cur.execute("SELECT name FROM cities WHERE state_id = \
                 (SELECT id FROM states WHERE name = '{}')\
-                ORDER BY id".format(state))
+                ORDER BY id".format(sys.argv[4]))
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
