@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """script that takes in an argument and displays all values in the states"""
 
-import MYSQLdb
+import MySQLdb
 import sys
 
 if __name__ == "__main__":
