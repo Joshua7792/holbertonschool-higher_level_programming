@@ -13,7 +13,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     db_name = sys.argv[3]
 
-    # Creates an Engine, which is how SQLAlchemy communicates with the database
+    # Create engine that connects to the core (MySQL)
     engine = create_engine(
         f"mysql+mysqldb://{user_name}:{password}@localhost:3306/{db_name}"
     )
@@ -21,11 +21,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Querying
-    query = session.query(State).filter(State.name.like("%a%")).all()
-
-    # Printing
-    for state in query:
-        print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
+    state = session.query(State).filter(State.name.like('%a%'))
+    for states in state:
+        if state:
+            print(f"{states.id}: {states.name}")
+        else:
+            print("Nothing")
