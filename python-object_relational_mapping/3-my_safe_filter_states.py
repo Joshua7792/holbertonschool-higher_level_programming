@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that takes in arguments and displays all values in the states table"""
+"""script that displays all values in the states table"""
 import MySQLdb
 import sys
 
@@ -26,4 +26,3 @@ if __name__ == "__main__":
     # Clean Up
     cur.close()
     db.close()
-
