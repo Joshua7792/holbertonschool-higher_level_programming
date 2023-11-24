@@ -14,10 +14,11 @@ if __name__ == "__main__":
 
     # Executing MySql Query
     cur.execute("SELECT * FROM states WHERE name = '{}'\
-                 ORDER BY id".format(search))
+                 ORDER BY id".format(sys.argv[4]))
 
     # Obtaining Query Result & prints the result in rows
-    for row in cur.fetchall():
+    rows = cur.fetchall()
+    for row in rows:
         if row[1][0] == 'N':
             print(row)
 
