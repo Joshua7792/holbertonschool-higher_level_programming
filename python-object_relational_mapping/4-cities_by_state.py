@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """script that lists all cities"""
+
+
 import MySQLdb
 import sys
 
@@ -17,7 +19,7 @@ if __name__ == "__main__":
                 cities.state_id = states.id ORDER BY cities.id")
 
 
-    # Obtaining Query Result & prints the result in rows
+# Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
     for row in rows:
         print(row)
