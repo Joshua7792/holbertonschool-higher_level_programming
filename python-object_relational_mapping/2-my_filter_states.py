@@ -12,9 +12,8 @@ if __name__ == "__main__":
     # Creating cursor object
     cur = db.cursor()
 
-# Using format to create the SQL query with user input
-    query = ("SELECT * FROM states WHERE name LIKE BINARY '{}'"
-             "/ ORDER BY id".format(sys.argv[4]))
+    # Using format to create the SQL query with user input
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'/ ORDER BY id".format(sys.argv[4])
     cur.execute(query)
 
     # Obtaining Query Result & prints the result in rows
