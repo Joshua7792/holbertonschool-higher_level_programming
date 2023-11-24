@@ -12,8 +12,9 @@ if __name__ == "__main__":
     cur = db.cursor()
 
 # Execute the query to retrieve all cities and order by cities.id
-    query = "SELECT * FROM cities ORDER BY id"
+    query = "SELECT id, name, state_id FROM cities ORDER BY id"
     cur.execute(query)
+
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
