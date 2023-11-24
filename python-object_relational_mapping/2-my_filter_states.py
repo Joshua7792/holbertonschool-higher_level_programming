@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """script that lists all states with a name starting with N (upper N)"""
-
 import MySQLdb
 import sys
 
@@ -13,7 +12,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Using format to create the SQL query with user input
-    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'/ ORDER BY id".format(sys.argv[4])
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id".format(sys.argv[4])
     cur.execute(query)
 
     # Obtaining Query Result & prints the result in rows
