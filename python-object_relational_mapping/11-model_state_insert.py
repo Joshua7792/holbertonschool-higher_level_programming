@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""create a new State"""
+"""create a new State with the name “Louisiana”"""
 
 import sys
 from sqlalchemy import create_engine
