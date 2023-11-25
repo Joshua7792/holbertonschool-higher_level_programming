@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session()
 
     state = session.query(State).filter(State.name.like(sys.argv[4]))
-    if state:
+    if state is not None:
         print(f"{state[0].id}")
     else:
         print("Not found")
